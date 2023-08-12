@@ -21,10 +21,9 @@ network_picture = on_command("白圣女",aliases={"我要看白圣女","cecilia"
 
 @network_picture.handle()
 async def handle_network_picture():
-    # str = "https://gitee.com/leaf2006/cecilia-img/raw/main/"
-    # str2 = "1"
+    
     # 构造图片消息段
-    url = "https://cdn.jsdelivr.net/gh/leaf2006/cecilia-img/"
+    url = "https://cdn.jsdelivr.net/gh/leaf2006/cecilia-img/" #使用github并使用jsdelivr进行cdn加速，但是速度依然不佳，有可能会timeout，但也不是不能用
     local = "http://172.24.28.97:1234/" #本地服务器，如果github端timeout，可以在本地部署，速度更快
     # direct = "https://raw.githubusercontent.com/leaf2006/cecilia-img/main/"
     num = random.randint(1,21)
